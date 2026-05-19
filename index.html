@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominick Molala — Expert UI/UX Designer & Full-Stack Web Engineer</title>
+    <meta name="description"
+        content="Portfolio of Dominick Molala, an expert UI/UX Designer and Web Developer creating custom high-converting websites, AI chatbots, and enterprise SaaS products." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Decorative Background Orbs -->
+    <div class="bg-orb-1" aria-hidden="true"></div>
+    <div class="bg-orb-2" aria-hidden="true"></div>
+
+    <!-- ── NAVIGATION ── -->
+    <nav class="nav" id="mainNav">
+        <a href="#home" class="nav-logo">
+            <span></span>Dominick Molala
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#services" class="nav-link">Business Solutions</a></li>
+            <li><a href="#work" class="nav-link">Selected Work</a></li>
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-action">
+            <a href="#contact" class="btn btn-glow btn-sm">Hire Me / Book Call</a>
+        </div>
+        <button class="burger" id="menuToggle" onclick="toggleMenu()"
+            aria-label="Toggle navigation menu">&#9776;</button>
+    </nav>
+
+    <!-- ── HERO SECTION ── -->
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="badge fade-up" id="heroBadge">
+                    <span class="pulse-dot"></span> Available for Full-Time Roles & Client Projects
+                </div>
+
+                <h1 class="hero-title fade-up delay-1" id="heroTitle">
+                    Premium <span class="gradient-text">UI/UX Design</span> &<br>
+                    High-Performance <span class="gradient-text-violet">Web Engineering</span>
+                </h1>
+
+                <p class="hero-sub fade-up delay-2" id="heroSubtitle">
+                    I am Dominick Molala — an expert UI/UX Designer and Full-Stack Developer. I partner with enterprise
+                    tech teams to craft intuitive software products, and help local business owners scale with bespoke,
+                    sales-driven websites and intelligent AI admin chatbots.
+                </p>
+
+                <div class="hero-btns fade-up delay-3" id="heroButtons">
+                    <a href="#services" class="btn btn-glow">Explore Business Solutions <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#work" class="btn btn-outline">View Case Studies</a>
+                </div>
+
+                <!-- Trust Metrics Bar -->
+                <div class="trust-metrics fade-up delay-4" id="trustBar">
+                    <div class="trust-item">
+                        <span class="trust-num">100%</span>
+                        <span class="trust-label">Client Satisfaction</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">3+</span>
+                        <span class="trust-label">Enterprise & Business Apps</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">24/7</span>
+                        <span class="trust-label">AI Chatbot Automation</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">Top 1%</span>
+                        <span class="trust-label">UI/UX Craftsmanship</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── MARQUEE TICKER ── -->
+        <div class="marquee-wrap" id="techMarquee">
+            <div class="marquee-track">
+                <div class="marquee-item">UI/UX Product Design <span class="star">✦</span></div>
+                <div class="marquee-item">High-Converting Websites <span class="star">✦</span></div>
+                <div class="marquee-item">Automated AI Chatbots <span class="star">✦</span></div>
+                <div class="marquee-item">Figma High-Fidelity Prototyping <span class="star">✦</span></div>
+                <div class="marquee-item">React & Node Fullstack Architecture <span class="star">✦</span></div>
+                <div class="marquee-item">Conversion Rate Optimization <span class="star">✦</span></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item">UI/UX Product Design <span class="star">✦</span></div>
+                <div class="marquee-item">High-Converting Websites <span class="star">✦</span></div>
+                <div class="marquee-item">Automated AI Chatbots <span class="star">✦</span></div>
+                <div class="marquee-item">Figma High-Fidelity Prototyping <span class="star">✦</span></div>
+                <div class="marquee-item">React & Node Fullstack Architecture <span class="star">✦</span></div>
+                <div class="marquee-item">Conversion Rate Optimization <span class="star">✦</span></div>
+            </div>
+        </div>
+
+        <!-- ── SERVICES & BUSINESS SOLUTIONS ── -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header fade-up" id="servicesHeader">
+                    <span class="section-tag">Solutions Engineered For Growth</span>
+                    <h2 class="section-title">How I Help Your Business Succeed</h2>
+                    <p class="section-sub">From local storefronts to scaling digital enterprises, I provide end-to-end
+                        design and software solutions that generate measurable revenue.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: Custom Websites -->
+                    <div class="service-card fade-up" id="service1">
+                        <div>
+                            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3 class="service-title">High-Converting Custom Websites</h3>
+                            <p class="service-desc">Stop losing customers to slow, generic template sites. I build
+                                lightning-fast, custom-designed websites and e-commerce stores optimized for top Google
+                                rankings (SEO) and maximum sales conversion.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Stunning, custom UI/UX design</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Advanced SEO & mobile responsiveness</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Secure payment gateways & fast loading</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-full" onclick="selectService('website')">Book
+                            Website Consultation</a>
+                    </div>
+
+                    <!-- Service 2: AI Chatbots & Automation -->
+                    <div class="service-card fade-up delay-1" id="service2">
+                        <div>
+                            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                            <h3 class="service-title">AI Support & Admin Chatbots</h3>
+                            <p class="service-desc">Turn your website into a 24/7 sales agent. I develop intelligent AI
+                                customer support assistants that instantly answer client FAQs, capture qualified sales
+                                leads, and book appointments automatically.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-circle-check"></i> 24/7 automated customer lead capture</li>
+                                <li><i class="fa-solid fa-circle-check"></i> WhatsApp & web dashboard integration</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Custom trained on your exact business data
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-violet btn-full" onclick="selectService('chatbot')">Get An AI
+                            Chatbot Demo</a>
+                    </div>
+
+                    <!-- Service 3: UI/UX & Product Prototyping -->
+                    <div class="service-card fade-up delay-2" id="service3">
+                        <div>
+                            <div class="service-icon"><i class="fa-brands fa-figma"></i></div>
+                            <h3 class="service-title">Expert UI/UX Product Design</h3>
+                            <p class="service-desc">Building a mobile app or software product? I provide professional
+                                user research, intuitive wireframing, design systems, and interactive Figma prototypes
+                                that guarantee user engagement and investor trust.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-circle-check"></i> High-fidelity Figma interactive prototypes
+                                </li>
+                                <li><i class="fa-solid fa-circle-check"></i> Enterprise SaaS & mobile app UX design</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Seamless developer handoff & documentation
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-full" onclick="selectService('uiux')">Request
+                            UI/UX Portfolio Review</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SELECTED WORK / CASE STUDIES ── -->
+        <section id="work" class="section">
+            <div class="container">
+                <div class="section-header fade-up" id="workHeader">
+                    <span class="section-tag">Case Studies</span>
+                    <h2 class="section-title">Projects Proven In Production</h2>
+                    <p class="section-sub">Explore how robust UX strategy and flawless code combine to deliver
+                        extraordinary digital products.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card fade-up" id="project1">
+                        <div class="project-img-wrapper">
+                            <img src="images/dashboard_mockup.png" alt="Dashboard Analytics SaaS UI"
+                                class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Web App & UI/UX</span>
+                                <span class="tag tag-metric">▲ 60% Faster Reporting Time</span>
+                            </div>
+                            <h3 class="project-title">Enterprise Analytics Dashboard</h3>
+                            <p class="project-desc">A state-of-the-art financial and analytics platform designed to
+                                simplify complex big data. Designed from scratch with a comprehensive dark-mode UI
+                                design system, live WebSocket graphs, and interactive chart filtering.</p>
+                            <div class="project-actions">
+                                <a href="dashboard-demo.html" target="_blank" class="btn btn-glow btn-sm">Launch Live
+                                    Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <span class="tag" style="margin:0;">React • WebSockets • Figma</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card fade-up" id="project2">
+                        <div class="project-img-wrapper">
+                            <img src="images/shopflow_mockup.png" alt="ShopFlow E-Commerce Mobile UI"
+                                class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">E-Commerce Architecture</span>
+                                <span class="tag tag-metric">▲ 34% Conversion Boost</span>
+                            </div>
+                            <h3 class="project-title">ShopFlow Premium E-Commerce</h3>
+                            <p class="project-desc">A fully optimized modern shopping platform featuring frictionless
+                                checkout flows, instant multi-category filtering, and secure Stripe payment integration.
+                                Crafted for absolute speed and conversion optimization.</p>
+                            <div class="project-actions">
+                                <a href="shopflow-demo.html" target="_blank" class="btn btn-glow btn-sm">Launch Live
+                                    Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <span class="tag" style="margin:0;">Redux • Stripe • UX Research</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card fade-up" id="project3">
+                        <div class="project-img-wrapper">
+                            <img src="images/mindful_mockup.png" alt="Mindful Daily Habit Tracker PWA"
+                                class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Mobile PWA & Gamification</span>
+                                <span class="tag tag-metric">▲ 87% Active Weekly Retention</span>
+                            </div>
+                            <h3 class="project-title">Mindful Daily Wellness App</h3>
+                            <p class="project-desc">A beautiful, habit-forming mobile progressive web app designed with
+                                soothing color psychology, interactive streak milestones, and offline capability. A
+                                testament to engaging consumer-first mobile UX design.</p>
+                            <div class="project-actions">
+                                <a href="mindful-demo.html" target="_blank" class="btn btn-glow btn-sm">Launch Live Demo
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <span class="tag" style="margin:0;">PWA • Service Workers • Mobile UI</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── ABOUT ME ── -->
+        <section id="about" class="section"
+            style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
+            <div class="container about-grid">
+                <div class="about-photo-wrapper fade-up" id="aboutImage">
+                    <div class="about-photo">
+                        <img src="images/WhatsApp Image 2026-05-19 at 11.35.35.jpeg" alt="Dominick Molala">
+                    </div>
+                    <div class="about-badge">
+                        <div class="about-badge-title">📍 Gauteng, SA</div>
+                        <div class="about-badge-sub">Available for Global Remote & Local Projects</div>
+                    </div>
+                </div>
+
+                <div class="about-text fade-up delay-1" id="aboutBio">
+                    <span class="section-tag">About The Architect</span>
+                    <h2>Designing interfaces that users love, engineering systems that businesses trust.</h2>
+                    <p>
+                        Hello! I'm <strong>Dominick Molala</strong>. I specialize in bridging the gap between
+                        world-class UI/UX design and high-performance technical engineering. I started my digital
+                        journey in 2026 and have since dedicated myself to mastering the art of creating digital
+                        products that look stunning and perform flawlessly under heavy traffic.
+                    </p>
+                    <p>
+                        Whether conducting deep user research in Figma to optimize customer checkout flows or building
+                        robust backend database architectures, I bring a holistic problem-solving mindset to every
+                        project. My work is driven by measurable results: faster loading times, higher lead conversions,
+                        and intuitive workflows.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-box">
+                            <div class="highlight-title"><i class="fa-solid fa-ranking-star"></i> UI/UX First Approach
+                            </div>
+                            <div class="highlight-desc">Deep focus on user psychology, typography, and intuitive
+                                navigation structures.</div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-title"><i class="fa-solid fa-code-compare"></i> Scalable Engineering
+                            </div>
+                            <div class="highlight-desc">Clean, maintainable code architectures built to industry best
+                                practices.</div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-glow">Let's Discuss Your Project <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SKILLS & EXPERTISE ── -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-up" id="skillsHeader">
+                    <span class="section-tag">Technical Competencies</span>
+                    <h2 class="section-title">My Professional Toolkit</h2>
+                    <p class="section-sub">A curated selection of modern technologies and methodologies I use to deliver
+                        exceptional work.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- UI UX Group -->
+                    <div class="skill-group fade-up" id="skillGroup1">
+                        <h4><i class="fa-brands fa-figma"></i> UI/UX & Product Design</h4>
+                        <ul>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Figma & Design Systems</span> <em>95%</em></div>
+                                <div class="skill-bar" style="--w:95%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Wireframing & Prototyping</span> <em>90%</em></div>
+                                <div class="skill-bar" style="--w:90%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>User Research & Usability</span> <em>85%</em></div>
+                                <div class="skill-bar" style="--w:85%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Mobile UI & Touch Ergonomics</span> <em>90%</em></div>
+                                <div class="skill-bar" style="--w:90%"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Frontend Group -->
+                    <div class="skill-group fade-up delay-1" id="skillGroup2">
+                        <h4><i class="fa-brands fa-react"></i> Frontend Engineering</h4>
+                        <ul>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>HTML5, CSS3 & Modern CSS</span> <em>95%</em></div>
+                                <div class="skill-bar" style="--w:95%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>JavaScript (ES6+) & TypeScript</span> <em>85%</em></div>
+                                <div class="skill-bar" style="--w:85%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>React & State Management</span> <em>85%</em></div>
+                                <div class="skill-bar" style="--w:85%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Web Performance Optimization</span> <em>90%</em></div>
+                                <div class="skill-bar" style="--w:90%"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend & AI Tools Group -->
+                    <div class="skill-group fade-up delay-2" id="skillGroup3">
+                        <h4><i class="fa-solid fa-microchip"></i> Backend & AI Automation</h4>
+                        <ul>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Supabase & BaaS</span> <em>70%</em></div>
+                                <div class="skill-bar" style="--w:70%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Firebase</span> <em>60%</em></div>
+                                <div class="skill-bar" style="--w:60%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Git Version Control & CI/CD</span> <em>85%</em></div>
+                                <div class="skill-bar" style="--w:85%"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-info"><span>Cursor, VS Code & Antigravity (AI Assistants)</span>
+                                    <em>95%</em>
+                                </div>
+                                <div class="skill-bar" style="--w:95%"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── EXPERIENCE & WORK HISTORY ── -->
+        <section id="experience" class="section"
+            style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
+            <div class="container">
+                <div class="section-header fade-up" id="expHeader">
+                    <span class="section-tag">Career Milestones</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-sub">A verified track record of delivering successful digital projects in
+                        collaborative agency and direct enterprise settings.</p>
+                </div>
+
+                <div class="expandable-section fade-up" id="workHistoryAcc">
+                    <div class="expandable-header" onclick="toggleExpand(this)">
+                        <div class="header-left">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Detailed Work Experience & Employment History</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down expand-icon"></i>
+                    </div>
+                    <div class="expandable-content show">
+                        <div class="timeline">
+                            <!-- Job 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026 — Present</div>
+                                <div class="timeline-body">
+                                    <h3> Intern Software Developer <span>@ Chase Continental</span></h3>
+                                    <p>
+                                        Engaged in designing and developing scalable frontend architectures,
+                                        collaborating within a cross-functional product team to enhance user engagement
+                                        through automated customer journeys. Implemented solutions that successfully
+                                        reduced initial page load times by 40%. Worked with AI agents to create seamless
+                                        user experiences and optimize application performance. Focused on maintaining
+                                        high standards of code quality and user satisfaction.
+                                    </p>
+                                    <div class="project-tags" style="margin-top:12px;">
+                                        <span class="tag">VS Code</span>
+                                        <span class="tag">GitHub</span>
+                                        <span class="tag">Claude AI</span>
+                                        <span class="tag">Supabase</span>
+                                        <span class="tag">Chase Agents</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 2 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026</div>
+                                <div class="timeline-body">
+                                    <h3> Content Manager & Developer <span>@Optiweb Solutions</span></h3>
+                                    <p>
+                                        Developed and executed high-quality content strategies for diverse clients,
+                                        effectively blending creativity with performance-driven results. Collaborated
+                                        closely with clients to understand their vision and translate it into engaging
+                                        digital experiences while maintaining brand consistency and user engagement
+                                        standards.
+                                    </p>
+                                    <div class="project-tags" style="margin-top:12px;">
+                                        <span class="tag">Canva</span>
+                                        <span class="tag">Nano Banana</span>
+                                        <span class="tag">Claude AI</span>
+                                        <span class="tag">Zernio</span>
+                                        <span class="tag">Grok AI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 3 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026</div>
+                                <div class="timeline-body">
+                                    <h3> Cold Caller <span>@Optiweb Solutions</span></h3>
+                                    <p>
+                                        Created meaningful first connections with potential clients through thoughtful
+                                        and engaging outreach, introducing tailored solutions in a clear and
+                                        approachable way. Focused on building trust from the first interaction,
+                                        confidently handling objections, and maintaining strong follow-ups to turn
+                                        conversations into valuable opportunities, all while contributing to a positive
+                                        and results-driven team environment.
+                                    </p>
+                                    <div class="project-tags" style="margin-top:12px;">
+                                        <span class="tag">Professional Outreach</span>
+                                        <span class="tag">Communication</span>
+                                        <span class="tag">Negotiation</span>
+                                        <span class="tag">Objection Handling</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 4 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026</div>
+                                <div class="timeline-body">
+                                    <h3>Full-Stack Web Consultant <span>@ Freelancer</span></h3>
+                                    <p>
+                                        Engineered customized marketing landing pages and robust interactive web tools
+                                        for commercial clients. Established an internal reusable UI component library
+                                        used across 15+ concurrent client accounts, ensuring strict brand consistency
+                                        and rapid turnaround times.
+                                    </p>
+                                    <div class="project-tags" style="margin-top:12px;">
+                                        <span class="tag">UI/UX Prototyping</span>
+                                        <span class="tag">HTML5/CSS3</span>
+                                        <span class="tag">JavaScript</span>
+                                        <span class="tag">Typescript</span>
+                                        <span class="tag">React.js</span>
+                                        <span class="tag">Vite</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 5 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026</div>
+                                <div class="timeline-body">
+                                    <h3>Independent Product Designer & Web Specialist <span>@ Freelancer </span></h3>
+                                    <p>
+                                        Partnered directly with @Optiweb Solutions to
+                                        design premium custom websites
+                                        and integrate automated customer service AI chatbots. Provided
+                                        complete digital
+                                        overhauls that successfully increased local lead inquiries and customer
+                                        satisfaction for client businesses.
+                                    </p>
+                                    <div class="project-tags" style="margin-top:12px;">
+                                        <span class="tag">Bespoke Web Design</span>
+                                        <span class="tag">AI Chatbots</span>
+                                        <span class="tag">WhatsApp Automation</span>
+                                    </div>
+                                </div>Lead UI/UX Designer & Frontend Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CONTACT SECTION ── -->
+        <section id="contact" class="section">
+            <div class="container contact-grid">
+                <!-- Left: Contact Details -->
+                <div class="contact-info fade-up" id="contactInfo">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2>Ready to elevate your digital presence or product?</h2>
+                    <p>
+                        Whether you are an enterprise tech team looking to hire an expert UI/UX developer, or a business
+                        owner wanting a high-converting website and automated AI chatbot, my inbox is open. I respond
+                        within 24 hours.
+                    </p>
+
+                    <div class="contact-details">
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <strong>Direct Email</strong>
+                                <a href="mailto:dominimolala77@gmail.com">dominimolala77@gmail.com</a>
+                            </div>
+                        </div>
+                        <!-- WhatsApp -->
+                        <div class="contact-item whatsapp">
+                            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="contact-text">
+                                <strong>WhatsApp Instant Chat</strong>
+                                <a href="https://wa.me/27780212021" target="_blank">+27 78 021 2021</a>
+                            </div>
+                        </div>
+                        <!-- LinkedIn -->
+                        <div class="contact-item linkedin">
+                            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="contact-text">
+                                <strong>Professional LinkedIn</strong>
+                                <a href="https://www.linkedin.com/in/dominick-molala-886289371/"
+                                    target="_blank">Dominick
+                                    Lehwelere Molala</a>
+                            </div>
+                        </div>
+                        <!-- GitHub -->
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="contact-text">
+                                <strong>Code Repository</strong>
+                                <a href="https://github.com/dominimolala77-max"
+                                    target="_blank">github.com/dominimolala77-max</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Inquiry Form -->
+                <div class="contact-form-wrap fade-up delay-1" id="contactFormBox">
+                    <h3 class="form-title">Send An Instant Inquiry</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name / Company *</label>
+                                <input type="text" id="name" placeholder="e.g. Sarah Jenkins" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="e.g. sarah@company.com" required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="serviceSelect">How Can I Help You? *</label>
+                            <select id="serviceSelect" required>
+                                <option value="general">Select an inquiry type...</option>
+                                <option value="website">Custom High-Converting Website / E-Commerce</option>
+                                <option value="chatbot">AI Customer Support & Admin Chatbot</option>
+                                <option value="uiux">UI/UX Product Design / Figma Prototyping</option>
+                                <option value="hiring">Full-Time / Contract Employment Opportunity</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details or Requirements *</label>
+                            <textarea id="message" rows="5"
+                                placeholder="Please describe your goals, timeline, or questions in detail..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-glow btn-full" id="submitBtn">
+                            Submit Inquiry <i class="fa-solid fa-paper-plane" style="margin-left:8px;"></i>
+                        </button>
+
+                        <div class="form-success" id="formSuccess">
+                            <i class="fa-solid fa-circle-check"
+                                style="font-size:24px; margin-bottom:8px; display:block;"></i>
+                            <strong>Inquiry Successfully Sent!</strong><br>
+                            Thank you for reaching out. I have received your message and will get back to you within 24
+                            hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA FOOTER BANNER ── -->
+        <div class="container">
+            <div class="cta-banner fade-up" id="ctaBanner">
+                <h2>Let's build something exceptional together.</h2>
+                <p>Partner with a dedicated expert who prioritizes your business growth and user experience.</p>
+                <a href="#contact" class="btn btn-glow">Start Your Project Consultation <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="mainFooter">
+        <div class="footer-content">
+            <p>&copy; 2026 Dominick Lehwelere Molala. Expert UI/UX & Web Development. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.optiweb.it.com/" target="_blank">@Optiweb Solutions</a>
+                <a href="https://chasecontinental.com/" target="_blank">@Chase Continental</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── WHATSAPP FLOATING BUTTON ── -->
+    <a href="https://wa.me/27642072814" target="_blank" class="whatsapp-float"
+        aria-label="Chat instantly with Dominick on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat Instantly on WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
