@@ -10,6 +10,7 @@ function buildMobileMenu() {
 
   mobileMenu = document.createElement('nav');
   mobileMenu.className = 'mobile-menu';
+  mobileMenu.id = 'mobileMenu';
   mobileMenu.setAttribute('role', 'navigation');
   mobileMenu.setAttribute('aria-label', 'Mobile menu');
 
@@ -44,6 +45,8 @@ function toggleMenu() {
   } else {
     mobileMenu.classList.add('open');
     document.body.style.overflow = 'hidden';
+    const menuToggle = document.getElementById('menuToggle');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
   }
 }
 
@@ -51,6 +54,8 @@ function closeMenu() {
   if (!mobileMenu) return;
   mobileMenu.classList.remove('open');
   document.body.style.overflow = '';
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
 }
 
 // Close on Escape key
@@ -206,6 +211,9 @@ function initContactForm() {
 
 /* ── INIT ─────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+
   initScrollAnimations();
   initSkillBars();
   initNavScroll();

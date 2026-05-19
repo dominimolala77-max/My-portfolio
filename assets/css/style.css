@@ -50,6 +50,7 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -93,6 +94,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -292,6 +294,7 @@ strong {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  max-width: 100%;
 }
 
 .btn-glow {
@@ -655,7 +658,7 @@ strong {
 
 .service-features li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 14px;
   color: var(--text-main);
@@ -664,6 +667,8 @@ strong {
 .service-features li i {
   color: var(--accent-cyan);
   font-size: 14px;
+  margin-top: 4px;
+  flex: 0 0 auto;
 }
 
 .service-card:nth-child(2) .service-features li i {
@@ -1186,6 +1191,7 @@ strong {
   font-size: 16px;
   font-weight: 600;
   color: var(--text-main);
+  overflow-wrap: anywhere;
 }
 
 .contact-text a:hover {
@@ -1457,9 +1463,32 @@ strong {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --nav-h: 70px;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .bg-orb-1,
+  .bg-orb-2 {
+    width: 360px;
+    height: 360px;
+    filter: blur(90px);
+  }
+
   .nav {
+    top: 12px;
+    width: calc(100% - 24px);
     padding: 0 20px;
     height: 70px;
+    border-radius: 24px;
+  }
+
+  .nav-logo {
+    min-width: 0;
+    font-size: 18px;
   }
   
   .nav-links, .nav-action {
@@ -1467,13 +1496,83 @@ strong {
   }
   
   .burger {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--card-border);
+  }
+
+  .mobile-menu {
+    top: 92px;
+    left: 12px;
+    right: 12px;
+    max-height: calc(100dvh - 112px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mobile-menu.open {
+    max-height: calc(100dvh - 112px);
+  }
+
+  .mobile-menu a {
+    padding: 14px 22px;
+  }
+
+  .container,
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+
+  .section-header {
+    margin-bottom: 44px;
+  }
+
+  .section-tag {
+    max-width: 100%;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .btn {
+    text-align: center;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 128px;
+    padding-bottom: 72px;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 11vw, 48px);
+    margin: 20px 0;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    margin-bottom: 32px;
   }
   
   .hero-btns {
     flex-direction: column;
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
+    gap: 14px;
+    margin-bottom: 40px;
   }
   
   .hero-btns .btn {
@@ -1481,37 +1580,255 @@ strong {
   }
   
   .trust-metrics {
-    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 24px 16px;
     padding: 20px;
+  }
+
+  .trust-num {
+    font-size: 28px;
+  }
+
+  .trust-label {
+    font-size: 12px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .marquee-wrap {
+    padding: 18px 0;
+  }
+
+  .marquee-track {
+    gap: 32px;
   }
   
   .services-grid, .skills-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-card,
+  .skill-group {
+    padding: 32px 24px;
+  }
+
+  .service-title {
+    font-size: 22px;
+  }
+
+  .project-card {
+    border-radius: 18px;
+  }
+
+  .project-img-wrapper {
+    min-height: 220px;
+  }
+
+  .project-title {
+    font-size: 26px;
   }
   
   .project-info, .contact-form-wrap {
     padding: 36px 24px;
   }
+
+  .project-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .project-actions .btn,
+  .project-actions .tag {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-photo-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+  }
+
+  .about-badge {
+    right: 12px;
+    bottom: 0;
+    left: 12px;
+    padding: 16px 18px;
+  }
+
+  .about-badge-title {
+    font-size: 20px;
+  }
+
+  .about-text h2,
+  .contact-info h2 {
+    font-size: 32px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .expandable-header {
+    padding: 22px 20px;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 18px;
+  }
+
+  .header-left {
+    align-items: flex-start;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-dot {
+    left: -30px;
+  }
+
+  .timeline-body h3 {
+    font-size: 20px;
+  }
+
+  .project-tags {
+    gap: 8px;
+  }
+
+  .tag {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-grid {
+    gap: 44px;
+  }
+
+  .contact-item {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 14px;
+  }
   
   .form-row {
     grid-template-columns: 1fr;
   }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px 16px;
+    font-size: 16px;
+  }
   
   .cta-banner {
     padding: 56px 24px;
+    margin: 48px 0 88px;
+    border-radius: 24px;
+  }
+
+  .cta-banner .btn {
+    width: 100%;
   }
   
   .footer-content {
     flex-direction: column;
     text-align: center;
   }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   
   .whatsapp-float span {
     display: none;
   }
+
   .whatsapp-float {
+    right: 18px;
+    bottom: 18px;
     width: 60px;
+    height: 60px;
     padding: 0;
     justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav {
+    padding: 0 14px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+  }
+
+  .container,
+  .hero-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(30px, 10vw, 38px);
+  }
+
+  .badge {
+    align-items: flex-start;
+    border-radius: 18px;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .badge .pulse-dot {
+    margin-top: 5px;
+    flex: 0 0 auto;
+  }
+
+  .trust-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .skill-group,
+  .project-info,
+  .contact-form-wrap {
+    padding: 28px 18px;
+  }
+
+  .project-img-wrapper {
+    min-height: 190px;
+  }
+
+  .about-text h2,
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .expandable-content.show {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cta-banner {
+    padding: 44px 18px;
   }
 }
