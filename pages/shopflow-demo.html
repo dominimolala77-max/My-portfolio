@@ -94,6 +94,24 @@
             font-size: 20px;
         }
 
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-toggle:hover {
+            border-color: var(--border-dark);
+        }
+
         .icon-btn {
             background: none;
             border: none;
@@ -420,6 +438,69 @@
 
         @media (max-width: 1200px) { .products-grid { grid-template-columns: repeat(3, 1fr); } .hero { min-height: 480px; } }
         @media (max-width: 900px) { .products-grid { grid-template-columns: repeat(2, 1fr); } .hero { grid-template-columns: 1fr; } .checkout-grid, .detail-view { grid-template-columns: 1fr; gap: 40px; } }
+        @media (max-width: 900px) {
+            .demo-bar {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .header-top {
+                grid-template-columns: auto 1fr auto;
+                padding: 18px 24px;
+                gap: 16px;
+            }
+
+            .mobile-menu-toggle {
+                display: inline-flex;
+            }
+
+            .logo {
+                font-size: 30px;
+                justify-self: center;
+            }
+
+            .header-icons {
+                gap: 16px;
+                font-size: 18px;
+            }
+
+            .header-icons .icon-btn:not(:last-child) {
+                display: none;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                display: grid;
+                gap: 0;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                background: var(--bg-main);
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+                transition: max-height 0.3s ease;
+            }
+
+            .nav-menu.open {
+                max-height: 360px;
+            }
+
+            .nav-menu .nav-link {
+                display: block;
+                padding: 18px 24px;
+                border-top: 1px solid var(--border-color);
+                text-align: center;
+            }
+
+            .nav-menu .nav-link::after {
+                display: none;
+            }
+        }
+
         @media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } .container { padding: 0 24px 60px; } .cart-drawer { width: 100%; right: -100%; } }
     </style>
 </head>
@@ -434,9 +515,12 @@
     <header>
         <div class="header-top">
             <div class="header-left">
+                <button class="mobile-menu-toggle" id="demoMenuToggle" type="button" onclick="toggleDemoMenu()" aria-controls="demoNavMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <a href="#" onclick="showPage('shop')" class="logo">AURA</a>
             </div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="demoNavMenu">
                 <a href="#" onclick="showPage('shop')" class="nav-link active">New In</a>
                 <a href="#" onclick="showPage('shop')" class="nav-link">Collections</a>
                 <a href="#" onclick="showPage('shop')" class="nav-link">Clothing</a>
@@ -630,8 +714,29 @@
         let currentActiveProduct = products[0];
         let currentDetailSize = "S";
 
+        function toggleDemoMenu() {
+            const nav = document.getElementById('demoNavMenu');
+            const toggle = document.getElementById('demoMenuToggle');
+            if (!nav || !toggle) return;
+
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            toggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        }
+
+        function closeDemoMenu() {
+            const nav = document.getElementById('demoNavMenu');
+            const toggle = document.getElementById('demoMenuToggle');
+            if (!nav || !toggle) return;
+
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+
         // Navigation & Views
         function showPage(pageId) {
+            closeDemoMenu();
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
             
@@ -838,6 +943,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderProductsGrid();
             updateCartBadges();
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') closeDemoMenu();
+            });
         });
     </script>
 </body>
