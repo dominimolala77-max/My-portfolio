@@ -1511,7 +1511,7 @@ strong {
     top: 92px;
     left: 12px;
     right: 12px;
-    max-height: calc(100dvh - 112px);
+    max-height: 0;
     overflow-y: auto;
     overscroll-behavior: contain;
   }
